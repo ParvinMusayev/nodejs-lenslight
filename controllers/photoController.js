@@ -18,10 +18,7 @@ const createPhoto = async (req, res) => {
 const getAllPhotos = async (req, res) => {
   try {
     const photos = await Photo.find({});
-    res.status(200).json({
-      succeded: true,
-      photos,
-    });
+    res.status(200).render("photos")
   } catch (error) {
     res.status(500).json({
       succeded: false,
