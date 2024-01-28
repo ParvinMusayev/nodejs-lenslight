@@ -67,4 +67,12 @@ const createToken = (userId) =>{
   })
 }
 
-export { createUser, loginUser };
+
+const getDashboardPage = (req, res) => {
+  res.render("dashboard", {
+    link: "dashboard",
+  });
+};
+
+
+export { createUser, loginUser,getDashboardPage };
